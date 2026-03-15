@@ -54,6 +54,7 @@ jobs:
         env:
           IG_USERNAME:      ${{ secrets.IG_USERNAME }}
           IG_PASSWORD:      ${{ secrets.IG_PASSWORD }}
+          IG_SESSION:       ${{ secrets.IG_SESSION }}
           GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
           GDRIVE_API_KEY:   ${{ secrets.GDRIVE_API_KEY }}
           GEMINI_API_KEY:   ${{ secrets.GEMINI_API_KEY }}
