@@ -81,11 +81,10 @@ class Config:
     CLIP_LENGTH = 60            # seconds per reel (Instagram max = 90s)
 
     # ── Upload timing ─────────────────────────────────────────
-    # 3 uploads per run × 4 GitHub runs/day = 12 reels/day
-    # Each run lasts ~5.5 hrs, well within GitHub's 6hr limit
-    MAX_UPLOADS_PER_RUN = 3
-    DELAY_MIN = 7080            # 1 hour 58 min between uploads
-    DELAY_MAX = 7380            # 2 hour 03 min between uploads
+    # 1 upload per run × 12 cron runs/day (every 2 hrs) = 12 reels/day
+    # The 2-hour gap is the cron schedule itself — no sleeping in code.
+    # Each GitHub Actions run finishes in ~3-5 minutes and exits cleanly.
+    MAX_UPLOADS_PER_RUN = 1
 
     # ── File paths ────────────────────────────────────────────
     REELS_DIR      = "reels"
@@ -995,30 +994,12 @@ def upload_reel(cl, video_path, thumbnail_path, caption):
 # ============================================================
 def smart_delay(upload_num):
     """
-    WHAT: Waits ~2 hours between uploads.
-    WHY:  Instagram flags accounts that upload too frequently.
-          Natural human-like spacing avoids rate limits and bans.
-    VARIATION: ±45 second random jitter so timing never looks robotic.
+    REMOVED: Delay is now handled by the cron schedule (every 2 hours).
+    This function is kept as a no-op so no other code needs changing.
+    Previously it slept for 2 hours inside GitHub Actions — wasteful.
+    Now the workflow just exits after 1 upload and cron re-triggers it.
     """
-    base   = random.randint(Config.DELAY_MIN, Config.DELAY_MAX)
-    jitter = random.randint(-45, 45)
-    total  = max(60, base + jitter)
-
-    next_t = datetime.now() + timedelta(seconds=total)
-    log.info(f"⏳ Waiting {total//60}m {total%60}s before next upload")
-    log.info(f"   Next upload approximately at: {next_t.strftime('%H:%M:%S')}")
-    log.info(f"   (Will print progress every 10 minutes)")
-
-    elapsed = 0
-    while elapsed < total:
-        chunk    = min(60, total - elapsed)
-        time.sleep(chunk)
-        elapsed += chunk
-        remaining = total - elapsed
-        if remaining > 0 and elapsed % 600 < 62:
-            log.info(f"   ⏳ Still waiting... {remaining//60}m {remaining%60}s remaining")
-
-    log.info("Delay complete — proceeding to next upload")
+    log.info("No in-script delay needed — cron schedule handles the 2hr gap")
 
 
 # ============================================================
@@ -1134,7 +1115,7 @@ def main():
     log.separator("=")
     print("🎬 FULLY AUTOMATED INSTAGRAM REEL UPLOADER", flush=True)
     print(f"📅 Started at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}", flush=True)
-    print(f"📋 Plan: download → thumbnail → login → upload × {Config.MAX_UPLOADS_PER_RUN} reels", flush=True)
+    print(f"📋 Plan: download → thumbnail → login → upload 1 reel → exit (cron handles 2hr gap)", flush=True)
     log.separator("=")
 
     # ── STEP 1: Write session from secret ────────────────────
@@ -1355,12 +1336,7 @@ def main():
                 os.remove(f)
                 log.info(f"   Deleted: {f}")
 
-        # ── Delay before next upload ─────────────────────────
-        if (uploaded_this_run < Config.MAX_UPLOADS_PER_RUN
-                and part_num < total_parts
-                and not stop_uploading):
-            log.info(f"Upload #{uploaded_this_run} done — waiting before next...")
-            smart_delay(uploaded_this_run)
+        # No in-script delay — cron triggers next run in 2 hours
 
     # ── Check movie complete ──────────────────────────────────
     log.separator("*")
