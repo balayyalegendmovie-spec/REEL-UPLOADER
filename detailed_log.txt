@@ -1,0 +1,29 @@
+============================================================
+============================================================
+[2026-03-15 16:47:49] INFO  | ✅ All required credentials verified
+[2026-03-15 16:47:49] INFO  | 📂 Scanning Google Drive folder: 1IDZrQP6r2bWlxdVtaEQ7R09sAWB7v1cc
+[2026-03-15 16:47:49] INFO  | 📂 Found 1 video files in Drive
+[2026-03-15 16:47:49] INFO  | 🆕 New movie detected: Doraemon_S16_–_Episode_1_–_A_story_of_peeling_body_skin_jaiko_and_telugu.mp4
+[2026-03-15 16:47:49] INFO  | 🆕 1 new movie(s) added to tracking
+[2026-03-15 16:47:49] INFO  | 🆕 Starting new: Doraemon_S16_–_Episode_1_–_A_story_of_peeling_body_skin_jaiko_and_telugu.mp4
+[2026-03-15 16:47:49] INFO  | 🎬 Current movie: Doraemon_S16_–_Episode_1_–_A_story_of_peeling_body_skin_jaiko_and_telugu
+[2026-03-15 16:47:49] INFO  | 📌 Status: pending
+[2026-03-15 16:47:49] INFO  | 📥 Downloading movie from Google Drive...
+[2026-03-15 16:47:53] INFO  | 📥 Download complete! Size: 63.0 MB
+[2026-03-15 16:47:53] INFO  | 📏 Duration: 23m 4s → 23 parts
+[2026-03-15 16:47:53] INFO  | 📊 Upload progress: 0/23
+[2026-03-15 16:47:53] INFO  | 🎨 Generating thumbnail with Gemini (gemini-2.0-flash-exp)...
+[2026-03-15 16:47:53] WARN  | Gemini model gemini-2.0-flash-exp failed: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.0-flash-exp is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+[2026-03-15 16:47:53] INFO  | 🎨 Generating thumbnail with Gemini (gemini-2.0-flash-preview-image-generation)...
+[2026-03-15 16:47:53] WARN  | Gemini model gemini-2.0-flash-preview-image-generation failed: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.0-flash-preview-image-generation is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+[2026-03-15 16:47:53] WARN  | All Gemini models failed → using video frame fallback
+[2026-03-15 16:47:53] INFO  | 🔐 Fresh login...
+[2026-03-15 16:48:01] ERROR | Fresh login failed (attempt 1): We can't find an account with animes_and.movies. Try another mobile number or email, or if you don't have an account, you can sign up.
+[2026-03-15 16:48:01] INFO  | ⏳ Waiting 120s before retry...
+[2026-03-15 16:50:01] INFO  | 🔐 Fresh login...
+[2026-03-15 16:50:08] ERROR | Fresh login failed (attempt 2): We can't find an account with animes_and.movies. Try another mobile number or email, or if you don't have an account, you can sign up.
+[2026-03-15 16:50:08] INFO  | ⏳ Waiting 240s before retry...
+[2026-03-15 16:54:08] INFO  | 🔐 Fresh login...
+[2026-03-15 16:54:18] ERROR | Fresh login failed (attempt 3): We can't find an account with animes_and.movies. Try another mobile number or email, or if you don't have an account, you can sign up.
+[2026-03-15 16:54:18] ERROR | 🔐 All login attempts failed!
+[2026-03-15 16:54:18] ERROR | Cannot login to Instagram. Stopping.
