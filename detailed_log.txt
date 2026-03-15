@@ -578,3 +578,19 @@ contents.list[union[Content,str,is-instance[Image],File,Part,list[union[str,is-i
 [2026-03-15 19:42:56] INFO  | 📁 Pushing progress to GitHub...
 [2026-03-15 19:42:56] INFO  |    Staged: movies_log.json
 [2026-03-15 19:42:56] INFO  |    Staged: progress.json
+[2026-03-15 19:42:56] INFO  |    Staged: detailed_log.txt
+[2026-03-15 19:42:57] INFO  | 📁 GitHub push complete
+[2026-03-15 19:42:57] INFO  | [5/23] Cleaning up clip and thumbnail files...
+[2026-03-15 19:42:57] INFO  |    Deleted: reels/part_5.mp4
+[2026-03-15 19:42:57] INFO  |    Deleted: thumbnails/thumb_5.jpg
+[2026-03-15 19:42:57] INFO  | 🛑 Reached run limit of 1 uploads
+[2026-03-15 19:42:57] INFO  | Remaining parts will be uploaded on the next scheduled run
+[2026-03-15 19:42:57] INFO  | Parts left: 18
+************************************************************
+[2026-03-15 19:42:57] INFO  | Run complete — 1 reels uploaded this run
+[2026-03-15 19:42:57] INFO  | 18 parts still remaining — will continue next scheduled run
+************************************************************
+[2026-03-15 19:42:57] INFO  | Saving final progress...
+[2026-03-15 19:42:57] INFO  | 📁 Pushing progress to GitHub...
+[2026-03-15 19:42:57] INFO  |    Staged: movies_log.json
+[2026-03-15 19:42:57] INFO  |    Staged: progress.json
