@@ -295,3 +295,88 @@ contents.list[union[Content,str,is-instance[Image],File,Part,list[union[str,is-i
 [2026-03-15 19:03:38] INFO  | 📁 Progress pushed to GitHub
 [2026-03-15 19:03:38] INFO  | ⏳ Waiting 120m 17s (next upload ≈ 21:03:55)
 [2026-03-15 19:13:38] INFO  |   ⏳ 110m 17s remaining...
+============================================================
+============================================================
+[2026-03-15 19:24:14] STEP  | 1/10: Write Instagram session from GitHub Secret
+[2026-03-15 19:24:14] INFO  | IG_SESSION secret found — validating JSON...
+[2026-03-15 19:24:14] INFO  | JSON valid — writing session.json to disk (NOT to git)...
+[2026-03-15 19:24:14] INFO  | 🔑 session.json written successfully (temp file, not committed to git)
+[2026-03-15 19:24:14] STEP  | 2/10: Verify all required GitHub Secrets
+[2026-03-15 19:24:14] INFO  |    ✓ IG_USERNAME is set
+[2026-03-15 19:24:14] INFO  |    ✓ IG_PASSWORD is set
+[2026-03-15 19:24:14] INFO  |    ✓ GDRIVE_FOLDER_ID is set
+[2026-03-15 19:24:14] INFO  |    ✓ GDRIVE_API_KEY is set
+[2026-03-15 19:24:14] INFO  |    ✓ GEMINI_API_KEY is set (AI thumbnails enabled)
+[2026-03-15 19:24:14] INFO  |    ✓ Instagram session available
+[2026-03-15 19:24:14] INFO  | ✅ All required secrets verified
+[2026-03-15 19:24:14] STEP  | 3/10: Scan Google Drive folder for video files
+[2026-03-15 19:24:14] INFO  | Calling Google Drive API v3...
+[2026-03-15 19:24:14] INFO  | Folder ID: 1IDZrQP6r2bWlxdVtaEQ7R09sAWB7v1cc
+[2026-03-15 19:24:14] INFO  | Sending Drive API request...
+[2026-03-15 19:24:14] INFO  | Drive API response: HTTP 200
+[2026-03-15 19:24:14] INFO  | Got 1 items from Drive (this page)
+[2026-03-15 19:24:14] INFO  |    🎬 Found video: Doraemon_S16_–_Episode_1_–_A_story_of_peeling_body_skin_jaiko_and_telugu.mp4 (63.0 MB)
+[2026-03-15 19:24:14] INFO  | Drive scan complete: 1 video(s) found
+[2026-03-15 19:24:14] STEP  | 4/10: Sync movie tracker with Drive contents
+[2026-03-15 19:24:14] INFO  | Loaded tracker: 1 movies known
+[2026-03-15 19:24:14] INFO  | No new movies detected in Drive
+[2026-03-15 19:24:14] INFO  | Tracker saved
+[2026-03-15 19:24:14] STEP  | 5/10: Select next movie to process
+[2026-03-15 19:24:14] INFO  | ▶️ Resuming in-progress movie: Doraemon_S16_–_Episode_1_–_A_story_of_peeling_body_skin_jaiko_and_telugu.mp4
+[2026-03-15 19:24:14] INFO  | Selected: Doraemon_S16_–_Episode_1_–_A_story_of_peeling_body_skin_jaiko_and_telugu
+[2026-03-15 19:24:14] INFO  | Status:   in_progress
+[2026-03-15 19:24:14] INFO  | Size:     63.0 MB
+[2026-03-15 19:24:14] STEP  | 6/10: Download movie from Google Drive
+[2026-03-15 19:24:14] INFO  | File ID: 1LW8zaz6WE0dsXIBakSrlgyvvigDVMAza
+[2026-03-15 19:24:14] INFO  | Saving to: current_movie.mp4
+[2026-03-15 19:24:14] INFO  | Removing old download file...
+[2026-03-15 19:24:14] INFO  | Starting download (progress shown below)...
+[2026-03-15 19:24:17] INFO  | ✅ Download complete! File size: 63.0 MB
+[2026-03-15 19:24:17] STEP  | 7/10: Analyse video duration and calculate parts count
+[2026-03-15 19:24:17] INFO  | Reading video duration with ffprobe...
+[2026-03-15 19:24:17] INFO  | ffprobe result: 1384.00 seconds
+[2026-03-15 19:24:17] INFO  | Video: 23m 4s total
+[2026-03-15 19:24:17] INFO  | Split into: 23 parts × 60s each
+[2026-03-15 19:24:17] INFO  | Movie will be split into 23 reels × 60s
+[2026-03-15 19:24:17] STEP  | 8/10: Update movie status and load upload progress
+[2026-03-15 19:24:17] INFO  | Upload progress: 2/23 parts done so far
+[2026-03-15 19:24:17] INFO  | Resuming from Part 3
+[2026-03-15 19:24:17] STEP  | 9/10: Prepare thumbnail background image
+[2026-03-15 19:24:17] INFO  | Found cached background: thumb_background.jpg
+[2026-03-15 19:24:17] INFO  | ✅ Cached thumbnail background loaded (720×480px) — skipping generation
+[2026-03-15 19:24:17] STEP  | 10/10: Login to Instagram via saved session
+[2026-03-15 19:24:17] INFO  | Loading session from: session.json
+[2026-03-15 19:24:17] INFO  | Login attempt 1/3...
+[2026-03-15 19:24:17] INFO  |    Loading session settings...
+[2026-03-15 19:24:17] INFO  |    Calling cl.login() with saved session...
+[2026-03-15 19:24:17] INFO  |    Verifying session is alive (get_timeline_feed)...
+[2026-03-15 19:24:25] INFO  |    Refreshing and saving session...
+[2026-03-15 19:24:25] INFO  | ✅ Instagram login successful (attempt 1)
+[2026-03-15 19:24:25] INFO  | Ready to upload! Parts remaining: 21
+[2026-03-15 19:24:25] INFO  | This run will upload up to 3 parts
+============================================================
+------------------------------------------------------------
+[2026-03-15 19:24:25] INFO  | 📦 PART 3 of 23 | 'Doraemon_S16_–_Episode_1_–_A_story_of_peeling_body_skin_jaiko_and_telugu' | Run upload #1/3
+[2026-03-15 19:24:25] INFO  | [3/23] Cutting clip with ffmpeg...
+[2026-03-15 19:24:25] INFO  | ✂️  Cutting Part 3/23 | Time range: 120s → 180s
+[2026-03-15 19:24:25] INFO  |    Method: ffmpeg stream-copy (no re-encoding, very fast)
+[2026-03-15 19:24:25] INFO  |    Output: reels/part_3.mp4
+[2026-03-15 19:24:25] INFO  |    Running: ffmpeg -ss 120 -t 60 -c copy ...
+[2026-03-15 19:24:25] INFO  |    ✅ Clip ready in 0.1s — size: 2.2 MB
+[2026-03-15 19:24:25] INFO  | [3/23] Creating thumbnail...
+[2026-03-15 19:24:25] INFO  |    Compositing thumbnail for Part 3/23...
+[2026-03-15 19:24:25] INFO  |    Background resized to 1080×1920px
+[2026-03-15 19:24:25] INFO  |    ✅ Thumbnail saved: thumbnails/thumb_3.jpg
+[2026-03-15 19:24:25] INFO  | [3/23] Caption: 🎥 Doraemon_S16_–_Episode_1_–_A_story_of_peeling_body_skin_ja...
+[2026-03-15 19:24:25] INFO  | [3/23] Uploading reel to Instagram...
+[2026-03-15 19:24:25] INFO  |    Video file: reels/part_3.mp4 (2.2 MB)
+[2026-03-15 19:24:25] INFO  |    Thumbnail:  thumbnails/thumb_3.jpg
+[2026-03-15 19:24:25] INFO  |    Caption length: 137 chars
+[2026-03-15 19:24:25] INFO  |    Upload attempt 1/3 — calling cl.clip_upload()...
+[2026-03-15 19:24:53] INFO  |    cl.clip_upload() returned successfully in 27.9s
+[2026-03-15 19:24:53] INFO  | ✅ Part 3/23 uploaded successfully!
+[2026-03-15 19:24:53] UPLOAD | Doraemon_S16_–_Episode_1_–_A_story_of_peeling_body_skin_jaiko_and_telugu | Part 3/23 | SUCCESS
+[2026-03-15 19:24:53] INFO  | Saving progress: 3/23 done
+[2026-03-15 19:24:53] INFO  | 📁 Pushing progress to GitHub...
+[2026-03-15 19:24:53] INFO  |    Staged: movies_log.json
+[2026-03-15 19:24:53] INFO  |    Staged: progress.json
