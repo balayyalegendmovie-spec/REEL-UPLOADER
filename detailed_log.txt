@@ -292,3 +292,6 @@ contents.list[union[Content,str,is-instance[Image],File,Part,list[union[str,is-i
 [2026-03-15 19:03:09] INFO  |   📤 Upload attempt 1/3...
 [2026-03-15 19:03:35] INFO  | ✅ Part 2/23 uploaded!
 [2026-03-15 19:03:35] UPLOAD | Doraemon_S16_–_Episode_1_–_A_story_of_peeling_body_skin_jaiko_and_telugu | Part 2/23 | SUCCESS
+[2026-03-15 19:03:38] INFO  | 📁 Progress pushed to GitHub
+[2026-03-15 19:03:38] INFO  | ⏳ Waiting 120m 17s (next upload ≈ 21:03:55)
+[2026-03-15 19:13:38] INFO  |   ⏳ 110m 17s remaining...
