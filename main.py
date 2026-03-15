@@ -405,65 +405,86 @@ def extract_frame(video_path, time_sec):
             try: video.close()
             except: pass
 
+def extract_frames_for_grid(video_path, frame_count=9):
+    video = VideoFileClip(video_path)
+    duration = video.duration
 
-# ============================================================
-#            THUMBNAIL GENERATOR (GEMINI + PILLOW)
-# ============================================================
-def generate_gemini_background(movie_name):
-    """
-    Use Gemini AI to generate a creative cinematic
-    background image for the movie thumbnail.
-    Returns PIL Image or None.
-    """
+    frames = []
+
+    for i in range(frame_count):
+        t = duration * (0.2 + i * 0.06)
+        frame = video.get_frame(t)
+        img = Image.fromarray(frame)
+        frames.append(img)
+
+    video.close()
+    return frames
+
+
+def create_frame_grid(frames):
+    size = 320
+
+    resized = [f.resize((size, size)) for f in frames]
+
+    grid = Image.new("RGB", (size * 3, size * 3))
+
+    index = 0
+    for y in range(3):
+        for x in range(3):
+            grid.paste(resized[index], (x * size, y * size))
+            index += 1
+
+    return grid
+
+
+def choose_best_frame_with_gemini(grid_image, frames):
+
     if not GEMINI_AVAILABLE or not Config.GEMINI_API_KEY:
-        log.warn("Gemini not available → using video frame for thumbnail")
-        return None
+        log.warn("Gemini not available → using middle frame")
+        return frames[4]
 
-    prompt = (
-        f"Generate a dramatic, cinematic movie poster background image. "
-        f"Dark moody atmosphere, dramatic lighting, professional quality. "
-        f"The movie is called '{movie_name}'. "
-        f"Make it visually striking and suitable as a social media thumbnail. "
-        f"Do NOT include any text or letters in the image. "
-        f"Pure visual art only."
+    client = genai.Client(api_key=Config.GEMINI_API_KEY)
+
+    prompt = """
+You are selecting the best movie thumbnail.
+
+The image shows a 3x3 grid of movie frames.
+
+Choose the frame that:
+- looks interesting
+- has characters or action
+- is bright and clear
+- would attract viewers
+
+Numbering:
+
+1 2 3
+4 5 6
+7 8 9
+
+Reply ONLY with the number.
+"""
+
+    buf = BytesIO()
+    grid_image.save(buf, format="JPEG")
+
+    response = client.models.generate_content(
+        model="models/gemini-2.5-flash",
+        contents=[
+            prompt,
+            {
+                "mime_type": "image/jpeg",
+                "data": buf.getvalue()
+            }
+        ]
     )
 
-    client = None
     try:
-        client = genai.Client(api_key=Config.GEMINI_API_KEY)
-    except Exception as e:
-        log.error(f"Gemini client init failed: {e}")
-        return None
-
-    for model_name in Config.GEMINI_MODELS:
-        try:
-            log.info(f"🎨 Generating thumbnail with Gemini ({model_name})...")
-
-            response = client.models.generate_content(
-                model=model_name,
-                contents=prompt,
-                config=genai_types.GenerateContentConfig(
-                    response_modalities=["IMAGE", "TEXT"]
-                ),
-            )
-
-            # Extract image from response
-            if response.candidates:
-                for part in response.candidates[0].content.parts:
-                    if hasattr(part, "inline_data") and part.inline_data is not None:
-                        image_data = part.inline_data.data
-                        image = Image.open(BytesIO(image_data))
-                        log.info("🎨 Gemini thumbnail background generated!")
-                        return image
-
-            log.warn(f"Model {model_name}: no image in response, trying next...")
-
-        except Exception as e:
-            log.warn(f"Gemini model {model_name} failed: {e}")
-            continue
-
-    log.warn("All Gemini models failed → using video frame fallback")
-    return None
+        index = int(response.text.strip())
+        return frames[index - 1]
+    except:
+        log.warn("Gemini returned invalid result → using middle frame")
+        return frames[4]
 
 
 def get_font(size):
@@ -966,18 +987,45 @@ def main():
     last_uploaded = progress["last_uploaded"]
 
     log.info(f"📊 Upload progress: {last_uploaded}/{total_parts}")
+# ---------- 9. Select best thumbnail frame using Gemini ----------
+gemini_bg = None
 
-    # ---------- 9. Generate Gemini background (once per movie) ----------
-    gemini_bg = None
-    if last_uploaded == 0 or not os.path.exists(Config.GEMINI_BG):
-        gemini_bg = generate_gemini_background(display_name)
-        if gemini_bg:
-            gemini_bg.save(Config.GEMINI_BG)
-    elif os.path.exists(Config.GEMINI_BG):
+if last_uploaded == 0 or not os.path.exists(Config.GEMINI_BG):
+
+    log.info("🎬 Extracting frames for thumbnail selection")
+
+    frames = extract_frames_for_grid(Config.MOVIE_FILE)
+
+    grid = create_frame_grid(frames)
+
+    # Save debug image (optional)
+    try:
+        grid.save("thumbnail_candidates.jpg")
+    except Exception:
+        pass
+
+    try:
+        log.info("🤖 Asking Gemini to choose best frame")
+        best_frame = choose_best_frame_with_gemini(grid, frames)
+    except Exception as e:
+        log.warn(f"Gemini selection failed: {e}")
+        best_frame = frames[4]
+
+    best_frame.save(Config.GEMINI_BG)
+    gemini_bg = best_frame
+
+else:
+    try:
+        gemini_bg = Image.open(Config.GEMINI_BG)
+        log.info("🎨 Loaded cached thumbnail background")
+    except:
+        gemini_bg = None
+
+    else:
         try:
             gemini_bg = Image.open(Config.GEMINI_BG)
-            log.info("🎨 Loaded cached Gemini background")
-        except Exception:
+            log.info("🎨 Loaded cached thumbnail background")
+        except:
             gemini_bg = None
 
     # ---------- 10. Login to Instagram ----------
