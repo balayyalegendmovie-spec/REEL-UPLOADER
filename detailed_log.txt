@@ -3806,3 +3806,13 @@ contents.list[union[Content,str,is-instance[Image],File,Part,list[union[str,is-i
 [2026-03-16 17:01:03] INFO  | 📁 Pushing progress to GitHub...
 [2026-03-16 17:01:03] INFO  |    Staged: movies_log.json
 [2026-03-16 17:01:03] INFO  |    Staged: progress.json
+[2026-03-16 17:01:03] INFO  |    Staged: detailed_log.txt
+[2026-03-16 17:01:04] INFO  | 📁 GitHub push complete
+[2026-03-16 17:01:04] INFO  | 🛑 Run limit (1) reached — continuing next scheduled run
+************************************************************
+[2026-03-16 17:01:04] INFO  | 1 part(s) uploaded | 7 remaining
+[2026-03-16 17:01:04] INFO  | Next part will upload on the next scheduled run (~2 hours)
+************************************************************
+[2026-03-16 17:01:04] INFO  | 📁 Pushing progress to GitHub...
+[2026-03-16 17:01:04] INFO  |    Staged: movies_log.json
+[2026-03-16 17:01:04] INFO  |    Staged: progress.json
