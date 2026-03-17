@@ -6654,3 +6654,267 @@ contents.list[union[Content,str,is-instance[Image],File,Part,list[union[str,is-i
 ============================================================
 [2026-03-17 12:59:59] INFO  | ✅ RUN COMPLETE — 2026-03-17 12:59:59
 ============================================================
+============================================================
+============================================================
+[2026-03-17 14:50:21] STEP  | 1/10: Write auth tokens from GitHub Secrets to disk
+[2026-03-17 14:50:21] INFO  | IG_SESSION → session.json secret found — writing...
+[2026-03-17 14:50:21] INFO  | 🔑 session.json written (NOT committed to git)
+[2026-03-17 14:50:21] WARN  | YT_TOKEN → yt_token.json secret empty and yt_token.json not found
+[2026-03-17 14:50:21] STEP  | 2/10: Verify all required GitHub Secrets
+[2026-03-17 14:50:21] INFO  |    ✓ IG_USERNAME
+[2026-03-17 14:50:21] INFO  |    ✓ IG_PASSWORD
+[2026-03-17 14:50:21] INFO  |    ✓ GDRIVE_FOLDER_ID
+[2026-03-17 14:50:21] INFO  |    ✓ GDRIVE_API_KEY
+[2026-03-17 14:50:21] INFO  |    ✓ GEMINI_API_KEY (AI thumbnails)
+[2026-03-17 14:50:21] INFO  |    ✓ Instagram session ready
+[2026-03-17 14:50:21] INFO  |    ~ YouTube token not set → YT skipped
+[2026-03-17 14:50:21] INFO  | ✅ All required secrets verified
+[2026-03-17 14:50:21] STEP  | 3/10: Scan Google Drive folder for video files
+[2026-03-17 14:50:21] INFO  | Calling Drive API — folder: 1IDZrQP6r2bWlxdVtaEQ7R09sAWB7v1cc
+[2026-03-17 14:50:21] INFO  | Drive API: HTTP 200
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_9_–_The_land_of_sweets_–_Tam+Tel+Hin_480p.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.9 – The land of sweets – Tam+Tel+H...' | Season=16 Episode=9 (92.3 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_8_–_A_genuine_3d_television_on_that_day_everything.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.8 – A genuine 3d television on tha...' | Season=16 Episode=8 (86.4 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_7_–_Flying_to_the_sky_with_the_character.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.7 – Flying to the sky with the cha...' | Season=16 Episode=7 (48.6 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_6_–_Transform_transform_and_transform_again.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.6 – Transform transform and transf...' | Season=16 Episode=6 (74.4 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_5_–_Treasure_of_skull_island_–_Tam+Tel+Hin.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.5 – Treasure of skull island' | Season=16 Episode=5 (80.2 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_52_–_The_happy_toasty_sticker_mom_vs_mom.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.52 – The happy toasty sticker mom v...' | Season=16 Episode=52 (85.3 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_51_–_Quiz_takes_you_around_the_world_attic.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.51 – Quiz takes you around the worl...' | Season=16 Episode=51 (74.3 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_50_–_Send_the_rude_caller_home_memorization.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.50 – Send the rude caller home memo...' | Season=16 Episode=50 (68.1 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_4_–_Everybody_changing_bodies_dunking_powder.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.4 – Everybody changing bodies dunk...' | Season=16 Episode=4 (82.6 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_49_–_Anywhere_cannon_gravity_paint_–_Tam+Tel+Hin.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.49 – Anywhere cannon gravity paint' | Season=16 Episode=49 (84.3 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_48_–_Jumbo_suneo_appears_nap_championship.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.48 – Jumbo suneo appears nap champi...' | Season=16 Episode=48 (81.6 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_47_–_Young_master_mambo_lying_mirror_–_Tam+Tel+Hin.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.47 – Young master mambo lying mirro...' | Season=16 Episode=47 (82.8 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_46_–_Im_nobiko_mecha_maker_–_Tam+Tel+Hin.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.46 – Im nobiko mecha maker' | Season=16 Episode=46 (81.4 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_45_–_Mechanical_transformation_device_only.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.45 – Mechanical transformation devi...' | Season=16 Episode=45 (81.8 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_44_–_Super_mobile_bath_1010_nobita_becomes.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.44 – Super mobile bath 1010 nobita ...' | Season=16 Episode=44 (73.0 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_43_–_The_it_shell_be_set_the_best_worst_meal.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.43 – The it shell be set the best w...' | Season=16 Episode=43 (78.3 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_42_–_The_genieless_magic_lamp_nobitas_ninja.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.42 – The genieless magic lamp nobit...' | Season=16 Episode=42 (84.7 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_41_–_Run_umatake_the_light_of_the_moon_–.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.41 – Run umatake the light of the m...' | Season=16 Episode=41 (75.1 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_40_–_Im_taking_the_good_parts_about_you_king.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.40 – Im taking the good parts about...' | Season=16 Episode=40 (74.8 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_3_–_Nobitas_birthday_adventure_–_Tam+Tel+Hin.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.3 – Nobitas birthday adventure' | Season=16 Episode=3 (77.8 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_39_–_Doraemons_oneday_love_affair_–_Tam+Tel+Hin.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.39 – Doraemons oneday love affair' | Season=16 Episode=39 (77.5 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_38_–_Realliezer_whats_mine_is_yours_–_Tam+Tel+Hin.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.38 – Realliezer whats mine is yours' | Season=16 Episode=38 (73.2 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_37_–_Gian_appears_on_tv_a_story_badge_for.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.37 – Gian appears on tv a story bad...' | Season=16 Episode=37 (68.0 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_36_–_The_gian_battery_is_infinite_the_cute.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.36 – The gian battery is infinite t...' | Season=16 Episode=36 (87.9 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_35_–_Nobita_becomes_a_ghost_the_puddle_pirarucu.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.35 – Nobita becomes a ghost the pud...' | Season=16 Episode=35 (75.3 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_34_–_The_dekisugi_incident_ultra_ring_–_Tam+Tel+Hin.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.34 – The dekisugi incident ultra ri...' | Season=16 Episode=34 (77.0 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_33_–_The_night_train_riding_to_school_on.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.33 – The night train riding to scho...' | Season=16 Episode=33 (72.1 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_32_–_The_spare_pocket_the_giant_sashimi_–.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.32 – The spare pocket the giant sas...' | Season=16 Episode=32 (66.7 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_31_–_The_star_festival_sky_came_falling_–.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.31 – The star festival sky came fal...' | Season=16 Episode=31 (70.7 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_30_–_Memories_of_grandma_–_Tam+Tel+Hin_480p.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.30 – Memories of grandma – Tam+Tel+...' | Season=16 Episode=30 (83.9 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_2_–_Welcome_to_the_haunted_inn_–_Tam+Tel+Hin.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.2 – Welcome to the haunted inn' | Season=16 Episode=2 (60.1 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_29_–_Shizuka_does_an_oppekepe_nobita_can.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.29 – Shizuka does an oppekepe nobit...' | Season=16 Episode=29 (77.5 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_28_–_Debut_song_gians_an_amazing_singer_–.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.28 – Debut song gians an amazing si...' | Season=16 Episode=28 (91.1 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_27_–_The_big_popularity_plan_wishing_a_star.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.27 – The big popularity plan wishin...' | Season=16 Episode=27 (55.0 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_26_–_Otter_nobitas_big_adventure_–_Tam+Tel+Hin.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.26 – Otter nobitas big adventure' | Season=16 Episode=26 (96.6 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_25_–_Troublesome_gulliver_nobita_the_talk.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.25 – Troublesome gulliver nobita th...' | Season=16 Episode=25 (78.4 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_24_–_The_lost_and_found_fishing_pond_thankfulness.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.24 – The lost and found fishing pon...' | Season=16 Episode=24 (73.0 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_23_–_Not_this_kind_of_shizuka_–_Tam+Tel+Hin.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.23 – Not this kind of shizuka' | Season=16 Episode=23 (68.8 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_22_–_Welcome_to_nobi_hotel_just_stay_honest.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.22 – Welcome to nobi hotel just sta...' | Season=16 Episode=22 (72.7 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_21_–_Nobitas_chaotic_first_day_of_school.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.21 – Nobitas chaotic first day of s...' | Season=16 Episode=21 (67.0 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_20_–_Cast_your_vote_for_boss_rigid_doraemon.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.20 – Cast your vote for boss rigid ...' | Season=16 Episode=20 (77.5 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_19_–_Running_away_to_the_cretaceous_period.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.19 – Running away to the cretaceous...' | Season=16 Episode=19 (81.6 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_18_–_Renovating_gians_house_the_nobita_sticker.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.18 – Renovating gians house the nob...' | Season=16 Episode=18 (74.6 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_17_–_Theres_snow_in_nobitas_neighborhood.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.17 – Theres snow in nobitas neighbo...' | Season=16 Episode=17 (77.4 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_16_–_Nobitas_pet_is_a_paper_dog_–_Tam+Tel+Hin.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.16 – Nobitas pet is a paper dog' | Season=16 Episode=16 (70.4 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_15_–_Giant_radish_dance_party_–_Tam+Tel+Hin.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.15 – Giant radish dance party' | Season=16 Episode=15 (96.8 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_14_–_Jaikos_scary_curry_one_up_one_back_–.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.14 – Jaikos scary curry one up one ...' | Season=16 Episode=14 (81.6 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_13_–_Cats_cradle_world_champion_–_Tam+Tel+Hin.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.13 – Cats cradle world champion' | Season=16 Episode=13 (74.3 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_12_–_Doraemon_wants_a_mother_too_lets_go.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.12 – Doraemon wants a mother too le...' | Season=16 Episode=12 (67.7 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_11_–_puppu_ichis_country_hope_–_Tam+Tel+Hin.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.11 – puppu ichis country hope' | Season=16 Episode=11 (78.6 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_10_–_Puppy_ichis_country_forging_a_bond_–.mkv
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.10 – Puppy ichis country forging a ...' | Season=16 Episode=10 (72.9 MB)
+[2026-03-17 14:50:21] INFO  |    Found: Doraemon_S16_–_Episode_1_–_A_story_of_peeling_body_skin_jaiko_and_telugu.mp4
+[2026-03-17 14:50:21] INFO  |           → Display: 'Doraemon S16 Ep.1 – A story of peeling body skin j...' | Season=16 Episode=1 (63.0 MB)
+[2026-03-17 14:50:21] INFO  | Drive scan complete: 52 video(s) found
+[2026-03-17 14:50:21] INFO  | Episode order after correct numerical sort:
+[2026-03-17 14:50:21] INFO  |    1. Doraemon S16 Ep.1 – A story of peeling body skin j... (Doraemon_S16_–_Episode_1_–_A_story_of_peeling_body_skin_jaiko_and_telugu.mp4)
+[2026-03-17 14:50:21] INFO  |    2. Doraemon S16 Ep.2 – Welcome to the haunted inn (Doraemon_S16_–_Episode_2_–_Welcome_to_the_haunted_inn_–_Tam+Tel+Hin.mkv)
+[2026-03-17 14:50:21] INFO  |    3. Doraemon S16 Ep.3 – Nobitas birthday adventure (Doraemon_S16_–_Episode_3_–_Nobitas_birthday_adventure_–_Tam+Tel+Hin.mkv)
+[2026-03-17 14:50:21] INFO  |    4. Doraemon S16 Ep.4 – Everybody changing bodies dunk... (Doraemon_S16_–_Episode_4_–_Everybody_changing_bodies_dunking_powder.mkv)
+[2026-03-17 14:50:21] INFO  |    5. Doraemon S16 Ep.5 – Treasure of skull island (Doraemon_S16_–_Episode_5_–_Treasure_of_skull_island_–_Tam+Tel+Hin.mkv)
+[2026-03-17 14:50:21] INFO  |    6. Doraemon S16 Ep.6 – Transform transform and transf... (Doraemon_S16_–_Episode_6_–_Transform_transform_and_transform_again.mkv)
+[2026-03-17 14:50:21] INFO  |    7. Doraemon S16 Ep.7 – Flying to the sky with the cha... (Doraemon_S16_–_Episode_7_–_Flying_to_the_sky_with_the_character.mkv)
+[2026-03-17 14:50:21] INFO  |    8. Doraemon S16 Ep.8 – A genuine 3d television on tha... (Doraemon_S16_–_Episode_8_–_A_genuine_3d_television_on_that_day_everything.mkv)
+[2026-03-17 14:50:21] INFO  |    9. Doraemon S16 Ep.9 – The land of sweets – Tam+Tel+H... (Doraemon_S16_–_Episode_9_–_The_land_of_sweets_–_Tam+Tel+Hin_480p.mkv)
+[2026-03-17 14:50:21] INFO  |    10. Doraemon S16 Ep.10 – Puppy ichis country forging a ... (Doraemon_S16_–_Episode_10_–_Puppy_ichis_country_forging_a_bond_–.mkv)
+[2026-03-17 14:50:21] INFO  |    11. Doraemon S16 Ep.11 – puppu ichis country hope (Doraemon_S16_–_Episode_11_–_puppu_ichis_country_hope_–_Tam+Tel+Hin.mkv)
+[2026-03-17 14:50:21] INFO  |    12. Doraemon S16 Ep.12 – Doraemon wants a mother too le... (Doraemon_S16_–_Episode_12_–_Doraemon_wants_a_mother_too_lets_go.mkv)
+[2026-03-17 14:50:21] INFO  |    13. Doraemon S16 Ep.13 – Cats cradle world champion (Doraemon_S16_–_Episode_13_–_Cats_cradle_world_champion_–_Tam+Tel+Hin.mkv)
+[2026-03-17 14:50:21] INFO  |    14. Doraemon S16 Ep.14 – Jaikos scary curry one up one ... (Doraemon_S16_–_Episode_14_–_Jaikos_scary_curry_one_up_one_back_–.mkv)
+[2026-03-17 14:50:21] INFO  |    15. Doraemon S16 Ep.15 – Giant radish dance party (Doraemon_S16_–_Episode_15_–_Giant_radish_dance_party_–_Tam+Tel+Hin.mkv)
+[2026-03-17 14:50:21] INFO  |    16. Doraemon S16 Ep.16 – Nobitas pet is a paper dog (Doraemon_S16_–_Episode_16_–_Nobitas_pet_is_a_paper_dog_–_Tam+Tel+Hin.mkv)
+[2026-03-17 14:50:21] INFO  |    17. Doraemon S16 Ep.17 – Theres snow in nobitas neighbo... (Doraemon_S16_–_Episode_17_–_Theres_snow_in_nobitas_neighborhood.mkv)
+[2026-03-17 14:50:21] INFO  |    18. Doraemon S16 Ep.18 – Renovating gians house the nob... (Doraemon_S16_–_Episode_18_–_Renovating_gians_house_the_nobita_sticker.mkv)
+[2026-03-17 14:50:21] INFO  |    19. Doraemon S16 Ep.19 – Running away to the cretaceous... (Doraemon_S16_–_Episode_19_–_Running_away_to_the_cretaceous_period.mkv)
+[2026-03-17 14:50:21] INFO  |    20. Doraemon S16 Ep.20 – Cast your vote for boss rigid ... (Doraemon_S16_–_Episode_20_–_Cast_your_vote_for_boss_rigid_doraemon.mkv)
+[2026-03-17 14:50:21] INFO  |    21. Doraemon S16 Ep.21 – Nobitas chaotic first day of s... (Doraemon_S16_–_Episode_21_–_Nobitas_chaotic_first_day_of_school.mkv)
+[2026-03-17 14:50:21] INFO  |    22. Doraemon S16 Ep.22 – Welcome to nobi hotel just sta... (Doraemon_S16_–_Episode_22_–_Welcome_to_nobi_hotel_just_stay_honest.mkv)
+[2026-03-17 14:50:21] INFO  |    23. Doraemon S16 Ep.23 – Not this kind of shizuka (Doraemon_S16_–_Episode_23_–_Not_this_kind_of_shizuka_–_Tam+Tel+Hin.mkv)
+[2026-03-17 14:50:21] INFO  |    24. Doraemon S16 Ep.24 – The lost and found fishing pon... (Doraemon_S16_–_Episode_24_–_The_lost_and_found_fishing_pond_thankfulness.mkv)
+[2026-03-17 14:50:21] INFO  |    25. Doraemon S16 Ep.25 – Troublesome gulliver nobita th... (Doraemon_S16_–_Episode_25_–_Troublesome_gulliver_nobita_the_talk.mkv)
+[2026-03-17 14:50:21] INFO  |    26. Doraemon S16 Ep.26 – Otter nobitas big adventure (Doraemon_S16_–_Episode_26_–_Otter_nobitas_big_adventure_–_Tam+Tel+Hin.mkv)
+[2026-03-17 14:50:21] INFO  |    27. Doraemon S16 Ep.27 – The big popularity plan wishin... (Doraemon_S16_–_Episode_27_–_The_big_popularity_plan_wishing_a_star.mkv)
+[2026-03-17 14:50:21] INFO  |    28. Doraemon S16 Ep.28 – Debut song gians an amazing si... (Doraemon_S16_–_Episode_28_–_Debut_song_gians_an_amazing_singer_–.mkv)
+[2026-03-17 14:50:21] INFO  |    29. Doraemon S16 Ep.29 – Shizuka does an oppekepe nobit... (Doraemon_S16_–_Episode_29_–_Shizuka_does_an_oppekepe_nobita_can.mkv)
+[2026-03-17 14:50:21] INFO  |    30. Doraemon S16 Ep.30 – Memories of grandma – Tam+Tel+... (Doraemon_S16_–_Episode_30_–_Memories_of_grandma_–_Tam+Tel+Hin_480p.mkv)
+[2026-03-17 14:50:21] INFO  |    31. Doraemon S16 Ep.31 – The star festival sky came fal... (Doraemon_S16_–_Episode_31_–_The_star_festival_sky_came_falling_–.mkv)
+[2026-03-17 14:50:21] INFO  |    32. Doraemon S16 Ep.32 – The spare pocket the giant sas... (Doraemon_S16_–_Episode_32_–_The_spare_pocket_the_giant_sashimi_–.mkv)
+[2026-03-17 14:50:21] INFO  |    33. Doraemon S16 Ep.33 – The night train riding to scho... (Doraemon_S16_–_Episode_33_–_The_night_train_riding_to_school_on.mkv)
+[2026-03-17 14:50:21] INFO  |    34. Doraemon S16 Ep.34 – The dekisugi incident ultra ri... (Doraemon_S16_–_Episode_34_–_The_dekisugi_incident_ultra_ring_–_Tam+Tel+Hin.mkv)
+[2026-03-17 14:50:21] INFO  |    35. Doraemon S16 Ep.35 – Nobita becomes a ghost the pud... (Doraemon_S16_–_Episode_35_–_Nobita_becomes_a_ghost_the_puddle_pirarucu.mkv)
+[2026-03-17 14:50:21] INFO  |    36. Doraemon S16 Ep.36 – The gian battery is infinite t... (Doraemon_S16_–_Episode_36_–_The_gian_battery_is_infinite_the_cute.mkv)
+[2026-03-17 14:50:21] INFO  |    37. Doraemon S16 Ep.37 – Gian appears on tv a story bad... (Doraemon_S16_–_Episode_37_–_Gian_appears_on_tv_a_story_badge_for.mkv)
+[2026-03-17 14:50:21] INFO  |    38. Doraemon S16 Ep.38 – Realliezer whats mine is yours (Doraemon_S16_–_Episode_38_–_Realliezer_whats_mine_is_yours_–_Tam+Tel+Hin.mkv)
+[2026-03-17 14:50:21] INFO  |    39. Doraemon S16 Ep.39 – Doraemons oneday love affair (Doraemon_S16_–_Episode_39_–_Doraemons_oneday_love_affair_–_Tam+Tel+Hin.mkv)
+[2026-03-17 14:50:21] INFO  |    40. Doraemon S16 Ep.40 – Im taking the good parts about... (Doraemon_S16_–_Episode_40_–_Im_taking_the_good_parts_about_you_king.mkv)
+[2026-03-17 14:50:21] INFO  |    41. Doraemon S16 Ep.41 – Run umatake the light of the m... (Doraemon_S16_–_Episode_41_–_Run_umatake_the_light_of_the_moon_–.mkv)
+[2026-03-17 14:50:21] INFO  |    42. Doraemon S16 Ep.42 – The genieless magic lamp nobit... (Doraemon_S16_–_Episode_42_–_The_genieless_magic_lamp_nobitas_ninja.mkv)
+[2026-03-17 14:50:21] INFO  |    43. Doraemon S16 Ep.43 – The it shell be set the best w... (Doraemon_S16_–_Episode_43_–_The_it_shell_be_set_the_best_worst_meal.mkv)
+[2026-03-17 14:50:21] INFO  |    44. Doraemon S16 Ep.44 – Super mobile bath 1010 nobita ... (Doraemon_S16_–_Episode_44_–_Super_mobile_bath_1010_nobita_becomes.mkv)
+[2026-03-17 14:50:21] INFO  |    45. Doraemon S16 Ep.45 – Mechanical transformation devi... (Doraemon_S16_–_Episode_45_–_Mechanical_transformation_device_only.mkv)
+[2026-03-17 14:50:21] INFO  |    46. Doraemon S16 Ep.46 – Im nobiko mecha maker (Doraemon_S16_–_Episode_46_–_Im_nobiko_mecha_maker_–_Tam+Tel+Hin.mkv)
+[2026-03-17 14:50:21] INFO  |    47. Doraemon S16 Ep.47 – Young master mambo lying mirro... (Doraemon_S16_–_Episode_47_–_Young_master_mambo_lying_mirror_–_Tam+Tel+Hin.mkv)
+[2026-03-17 14:50:21] INFO  |    48. Doraemon S16 Ep.48 – Jumbo suneo appears nap champi... (Doraemon_S16_–_Episode_48_–_Jumbo_suneo_appears_nap_championship.mkv)
+[2026-03-17 14:50:21] INFO  |    49. Doraemon S16 Ep.49 – Anywhere cannon gravity paint (Doraemon_S16_–_Episode_49_–_Anywhere_cannon_gravity_paint_–_Tam+Tel+Hin.mkv)
+[2026-03-17 14:50:21] INFO  |    50. Doraemon S16 Ep.50 – Send the rude caller home memo... (Doraemon_S16_–_Episode_50_–_Send_the_rude_caller_home_memorization.mkv)
+[2026-03-17 14:50:21] INFO  |    51. Doraemon S16 Ep.51 – Quiz takes you around the worl... (Doraemon_S16_–_Episode_51_–_Quiz_takes_you_around_the_world_attic.mkv)
+[2026-03-17 14:50:21] INFO  |    52. Doraemon S16 Ep.52 – The happy toasty sticker mom v... (Doraemon_S16_–_Episode_52_–_The_happy_toasty_sticker_mom_vs_mom.mkv)
+[2026-03-17 14:50:21] STEP  | 4/10: Sync movie tracker with Drive contents
+[2026-03-17 14:50:21] INFO  | Episode order saved: 52 entries
+[2026-03-17 14:50:21] INFO  | No new movies detected
+[2026-03-17 14:50:21] STEP  | 5/10: Select next movie/episode to process
+[2026-03-17 14:50:21] INFO  | ▶️ Resuming: Doraemon S16 Ep.2 – Welcome to the haunted inn
+[2026-03-17 14:50:21] INFO  | Selected: Doraemon S16 Ep.2 – Welcome to the haunted inn
+[2026-03-17 14:50:21] INFO  | File:     Doraemon_S16_–_Episode_2_–_Welcome_to_the_haunted_inn_–_Tam+Tel+Hin.mkv
+[2026-03-17 14:50:21] INFO  | Status:   in_progress
+[2026-03-17 14:50:21] INFO  | Season:   16  Episode: 2
+[2026-03-17 14:50:21] STEP  | 6/10: Download movie from Google Drive
+[2026-03-17 14:50:21] INFO  | File ID: 1yJf5OOle30rwhMh6HlxhDHhz9kIHgNm0  →  current_movie.mp4
+[2026-03-17 14:50:21] INFO  | Starting download...
+[2026-03-17 14:50:26] INFO  | ✅ Download complete! 60.1 MB
+[2026-03-17 14:50:26] STEP  | 7/10: Analyse video duration and calculate parts count
+[2026-03-17 14:50:26] INFO  | Reading duration with ffprobe...
+[2026-03-17 14:50:26] INFO  | Duration: 1427.01s = 23m 47s
+[2026-03-17 14:50:26] INFO  | Will split into 25 parts × 59s each
+[2026-03-17 14:50:26] STEP  | 8/10: Update status and load upload progress
+[2026-03-17 14:50:26] INFO  | Progress: 3/25 parts done
+[2026-03-17 14:50:26] INFO  | Resuming from Part 4
+[2026-03-17 14:50:26] STEP  | 9/10: Prepare thumbnail background
+[2026-03-17 14:50:26] INFO  | No cache for 'Doraemon S16 Ep.2 – Welcome to the haunted inn' — generating background...
+[2026-03-17 14:50:26] INFO  | Trying Gemini image gen (gemini-2.0-flash-exp-image-generation)...
+[2026-03-17 14:50:26] WARN  | Gemini image gemini-2.0-flash-exp-image-generation failed: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key expired. Please renew the API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key expired. Please renew the API key.'}]}}
+[2026-03-17 14:50:26] INFO  | Trying Gemini image gen (imagen-3.0-generate-002)...
+[2026-03-17 14:50:27] WARN  | Gemini image imagen-3.0-generate-002 failed: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key expired. Please renew the API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key expired. Please renew the API key.'}]}}
+[2026-03-17 14:50:27] WARN  | Gemini image gen failed → best video frame will be used
+[2026-03-17 14:50:27] INFO  | Extracting 9 frames from video for thumbnail selection...
+[2026-03-17 14:50:27] INFO  |    Frame 1/9: t=214.1s
+[2026-03-17 14:50:27] INFO  |    Frame at t=214.1s → tmp_frames/frame_0.jpg
+[2026-03-17 14:50:27] INFO  |    Frame: 720×480px
+[2026-03-17 14:50:27] INFO  |    Frame 2/9: t=313.9s
+[2026-03-17 14:50:27] INFO  |    Frame at t=313.9s → tmp_frames/frame_1.jpg
+[2026-03-17 14:50:27] INFO  |    Frame: 720×480px
+[2026-03-17 14:50:27] INFO  |    Frame 3/9: t=413.8s
+[2026-03-17 14:50:27] INFO  |    Frame at t=413.8s → tmp_frames/frame_2.jpg
+[2026-03-17 14:50:27] INFO  |    Frame: 720×480px
+[2026-03-17 14:50:27] INFO  |    Frame 4/9: t=513.7s
+[2026-03-17 14:50:27] INFO  |    Frame at t=513.7s → tmp_frames/frame_3.jpg
+[2026-03-17 14:50:27] INFO  |    Frame: 720×480px
+[2026-03-17 14:50:27] INFO  |    Frame 5/9: t=613.6s
+[2026-03-17 14:50:27] INFO  |    Frame at t=613.6s → tmp_frames/frame_4.jpg
+[2026-03-17 14:50:27] INFO  |    Frame: 720×480px
+[2026-03-17 14:50:27] INFO  |    Frame 6/9: t=713.5s
+[2026-03-17 14:50:27] INFO  |    Frame at t=713.5s → tmp_frames/frame_5.jpg
+[2026-03-17 14:50:27] INFO  |    Frame: 720×480px
+[2026-03-17 14:50:27] INFO  |    Frame 7/9: t=813.4s
+[2026-03-17 14:50:27] INFO  |    Frame at t=813.4s → tmp_frames/frame_6.jpg
+[2026-03-17 14:50:27] INFO  |    Frame: 720×480px
+[2026-03-17 14:50:27] INFO  |    Frame 8/9: t=913.3s
+[2026-03-17 14:50:27] INFO  |    Frame at t=913.3s → tmp_frames/frame_7.jpg
+[2026-03-17 14:50:27] INFO  |    Frame: 720×480px
+[2026-03-17 14:50:27] INFO  |    Frame 9/9: t=1013.2s
+[2026-03-17 14:50:27] INFO  |    Frame at t=1013.2s → tmp_frames/frame_8.jpg
+[2026-03-17 14:50:27] INFO  |    Frame: 720×480px
+[2026-03-17 14:50:27] INFO  | All frames extracted
+[2026-03-17 14:50:27] INFO  | Building 3×3 frame grid for Gemini selection...
+[2026-03-17 14:50:28] INFO  | Asking Gemini (gemini-2.0-flash) to pick best frame...
+[2026-03-17 14:50:28] WARN  | Gemini gemini-2.0-flash failed: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key expired. Please renew the API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key expired. Please renew the API key.'}]}}
+[2026-03-17 14:50:28] INFO  | Asking Gemini (gemini-1.5-flash) to pick best frame...
+[2026-03-17 14:50:28] WARN  | Gemini gemini-1.5-flash failed: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key expired. Please renew the API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key expired. Please renew the API key.'}]}}
+[2026-03-17 14:50:28] INFO  | Asking Gemini (gemini-1.5-pro) to pick best frame...
+[2026-03-17 14:50:28] WARN  | Gemini gemini-1.5-pro failed: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key expired. Please renew the API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key expired. Please renew the API key.'}]}}
+[2026-03-17 14:50:28] WARN  | All Gemini models failed → middle frame
+[2026-03-17 14:50:28] INFO  | ✅ Background cached: thumb_cache/thumb_bg_e11c3ec6fe63.jpg
+[2026-03-17 14:50:28] STEP  | 10/10: Login to Instagram and YouTube
+[2026-03-17 14:50:28] INFO  | ── Instagram Login ──────────────────────────────────
+[2026-03-17 14:50:28] INFO  | Instagram login attempt 1/3...
+[2026-03-17 14:50:36] INFO  | ✅ Instagram logged in
+[2026-03-17 14:50:36] INFO  | ── YouTube Login ────────────────────────────────────
+[2026-03-17 14:50:36] WARN  | google-api-python-client not installed → YouTube skipped
+[2026-03-17 14:50:36] INFO  | Episode 2 of 52 | Parts remaining: 22
+============================================================
+------------------------------------------------------------
+[2026-03-17 14:50:36] INFO  | 📦 PART 4/25 | 'Doraemon S16 Ep.2 – Welcome to the haunted inn'
+[2026-03-17 14:50:36] INFO  | ✂️  Part 4/25 | 177s→236s | ffmpeg stream-copy (no re-encode)
+[2026-03-17 14:50:36] INFO  |    ✅ Clip ready in 0.1s — 2.4 MB
+[2026-03-17 14:50:36] INFO  |    Compositing thumbnail Part 4/25...
+[2026-03-17 14:50:36] INFO  |    ✅ Thumbnail saved
+[2026-03-17 14:50:36] INFO  | [4/25] → Instagram...
+[2026-03-17 14:50:36] INFO  |    📸 Instagram upload | 2.4 MB
+[2026-03-17 14:50:36] INFO  |    Attempt 1/3 — cl.clip_upload()...
+[2026-03-17 14:51:05] INFO  |    ✅ Instagram done in 29.1s
+[2026-03-17 14:51:05] UPLOAD|Instagram|Doraemon S16 Ep.2 – Welcome to the haunted inn|Part 4/25|SUCCESS
+[2026-03-17 14:51:05] INFO  | ✅ Part 4/25 done | IG=✅  YT=❌
+[2026-03-17 14:51:05] INFO  | 📁 Pushing progress to GitHub...
+[2026-03-17 14:51:05] INFO  |    Staged: movies_log.json
+[2026-03-17 14:51:05] INFO  |    Staged: progress.json
